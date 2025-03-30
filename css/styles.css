@@ -1,0 +1,373 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #3a86ff;
+    font-weight: 700;
+}
+
+/* Timer Display Styles */
+.timer-container {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    margin: 0 auto 2rem;
+}
+
+.timer-display {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.time {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.timer-label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Progress Ring Styles */
+.progress-ring-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.progress-ring-circle-bg {
+    fill: none;
+    stroke: #f0f0f0;
+    stroke-width: 10px;
+}
+
+.progress-ring-circle {
+    fill: none;
+    stroke: #3a86ff;
+    stroke-width: 10px;
+    stroke-linecap: round;
+    transform-origin: center;
+    transform: rotate(-90deg);
+    transition: stroke-dashoffset 0.3s;
+}
+
+/* Button Styles */
+.timer-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.primary-btn {
+    background-color: #3a86ff;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #2a75f0;
+}
+
+.secondary-btn {
+    background-color: #f5f5f5;
+    color: #666;
+}
+
+.secondary-btn:hover {
+    background-color: #e6e6e6;
+}
+
+.btn:disabled {
+    background-color: #c8c8c8;
+    cursor: not-allowed;
+}
+
+.btn i {
+    font-size: 0.9rem;
+}
+
+/* Session Controls Styles */
+.session-controls {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.session-control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.session-control label {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.number-input {
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+}
+
+.number-input button {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.decrease-btn {
+    border-radius: 6px 0 0 6px;
+}
+
+.increase-btn {
+    border-radius: 0 6px 6px 0;
+}
+
+.number-input button:hover {
+    background-color: #e6e6e6;
+}
+
+.number-input input {
+    width: calc(100% - 5rem);
+    height: 100%;
+    border: 1px solid #ddd;
+    border-width: 1px 0;
+    text-align: center;
+    font-family: inherit;
+    font-size: 1rem;
+    /* Removed -moz-appearance property */
+    appearance: textfield; /* This is the standard property that replaced -moz-appearance */
+}
+
+/* Hide spinner buttons in webkit browsers */
+.number-input input::-webkit-outer-spin-button,
+.number-input input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Session Stats Styles */
+.session-stats {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+}
+
+#current-session,
+#completed-pomodoros {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #3a86ff;
+}
+
+/* Notification Styles */
+.notification-container {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: bottom 0.3s ease;
+    z-index: 100;
+}
+
+.notification-container.show {
+    bottom: 20px;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.notification-icon {
+    font-size: 1.2rem;
+    color: #3a86ff;
+}
+
+#notification-text {
+    font-weight: 500;
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    color: #aaa;
+    margin-left: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.notification-close:hover {
+    color: white;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin: 2rem 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #3a86ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 650px) {
+    .container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .session-controls {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Theme Colors - Focus, Short Break, Long Break */
+body.focus-mode {
+    background-color: #f5f7fa;
+}
+
+body.short-break-mode {
+    background-color: #f0f7f4;
+}
+
+body.long-break-mode {
+    background-color: #f4f3f7;
+}
+
+.focus-mode .progress-ring-circle {
+    stroke: #3a86ff; /* Blue */
+}
+
+.short-break-mode .progress-ring-circle {
+    stroke: #38b000; /* Green */
+}
+
+.long-break-mode .progress-ring-circle {
+    stroke: #8338ec; /* Purple */
+}
+
+.focus-mode h1, .focus-mode #current-session, .focus-mode #completed-pomodoros {
+    color: #3a86ff;
+}
+
+.short-break-mode h1, .short-break-mode #current-session, .short-break-mode #completed-pomodoros {
+    color: #38b000;
+}
+
+.long-break-mode h1, .long-break-mode #current-session, .long-break-mode #completed-pomodoros {
+    color: #8338ec;
+}
+
+.focus-mode .primary-btn {
+    background-color: #3a86ff;
+}
+
+.short-break-mode .primary-btn {
+    background-color: #38b000;
+}
+
+.long-break-mode .primary-btn {
+    background-color: #8338ec;
+}
+
+.focus-mode .primary-btn:hover {
+    background-color: #2a75f0;
+}
+
+.short-break-mode .primary-btn:hover {
+    background-color: #2a9000;
+}
+
+.long-break-mode .primary-btn:hover {
+    background-color: #722bd9;
+}
