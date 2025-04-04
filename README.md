@@ -10,7 +10,7 @@ A sleek, customizable Pomodoro Timer web application that helps you boost produc
 - **Progress Tracking** - Circular progress indicator shows time remaining at a glance
 - **Session Statistics** - Track daily completed Pomodoros and current session progress
 - **Notifications** - Visual and audio notifications when timers complete
-- **Responsive Design** - Works seamlessly on desktop and mobile devices 
+- **Responsive Design** - Works seamlessly on desktop and mobile devices  
 - **Persistent Settings** - Your preferences are saved between sessions 
 
 ## 🚀 Quick Start
