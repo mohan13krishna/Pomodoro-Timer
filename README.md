@@ -13,7 +13,7 @@ A sleek, customizable Pomodoro Timer web application that helps you boost produc
 - **Responsive Design** - Works seamlessly on desktop and mobile devices  
 - **Persistent Settings** - Your preferences are saved between sessions 
 
-## 🚀 Quick Start
+## 🚀 Quick Start 
 
 ### Live Demo
 
