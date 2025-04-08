@@ -4,7 +4,7 @@ A sleek, customizable Pomodoro Timer web application that helps you boost produc
 
 ## 📋 Features
 
-- **Elegant User Interface** - Clean, modern design with visual progress indicator
+- **Elegant User Interface** - Clean, modern design with visual progress indicator 
 - **Fully Customizable** - Adjust focus time, short breaks, long breaks, and session counts 
 - **Visual Feedback** - Color-coded themes for different timer modes (focus, short break, long break)
 - **Progress Tracking** - Circular progress indicator shows time remaining at a glance
