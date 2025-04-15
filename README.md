@@ -1,6 +1,6 @@
 # 🍅 Pomodoro Timer
   
-A sleek, customizable Pomodoro Timer web application that helps you boost productivity through focused work sessions and structured breaks. 
+A sleek, customizable Pomodoro Timer web application that helps you boost productivity through focused work sessions and structured breaks.  
  
 ## 📋 Features
 
