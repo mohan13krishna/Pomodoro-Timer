@@ -15,7 +15,7 @@ A sleek, customizable Pomodoro Timer web application that helps you boost produc
 
 ## 🚀 Quick Start 
 
-### Live Demo
+### Live Demo 
 
 Check out the live demo: [Pomodoro Timer Demo](https://mohan13krishna.github.io/Pomodoro-Timer/)
 
